@@ -78,9 +78,9 @@ $data = json_decode($response, true);
 
 // Memeriksa apakah 'taken' bernilai true
 if ($data['taken'] === true) {
-    echo "[" . date("h:i:s") . "]=>$Red Result =>$White $randomWord $Red telah diambil | $White Response : $response \n";
+    echo "[" . date("h:i:s") . "]=>$Red Result =>$White $randomWord $Red telah diambil $White| Response : $response \n";
 } elseif ($data['taken'] === false) {
-    echo "[" . date("h:i:s") . "]=>$Green Result =>$White $randomWord $Green Username tersedia | $White Response : $response \n";
+    echo "[" . date("h:i:s") . "]=>$Green Result =>$White $randomWord $Green Username tersedia $White| Response : $response \n";
     file_put_contents('UsernameAvailable.txt', $randomWord . PHP_EOL, FILE_APPEND);
 }   else {
     echo "[" . date("h:i:s") . "]=>$Red Result => Error! $White| Response : $response \n";
