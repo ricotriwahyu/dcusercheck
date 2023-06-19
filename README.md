@@ -1,5 +1,4 @@
-# dcusercheck
-Discord random username checker
+# Discord random Username Checker
 
 Usage php cek.php
 
