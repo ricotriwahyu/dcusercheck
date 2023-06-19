@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 $Black = "\033[0;30m";        # Black
 $Red = "\033[0;31m";          # Red
 $Green = "\033[0;32m";        # Green
