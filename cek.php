@@ -31,7 +31,6 @@ $maxLength = trim(fgets(STDIN));
 
 echo $White . "How Much Username : " . $normal;
 $numberOfWords = trim(fgets(STDIN));
-//$numberOfWords = 20; // Jumlah kata acak yang ingin dihasilkan
 
 for ($i = 0; $i < $numberOfWords; $i++) {
     $randomLength = rand($minLength, $maxLength);
@@ -70,13 +69,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 curl_setopt($ch, CURLOPT_POSTFIELDS, '{"username":"'.$randomWord.'"}');
 
 $response = curl_exec($ch);
-// Response JSON
-//$response = '{"taken": true}';
-
-// Mengubah respons JSON menjadi array asosiatif
 $data = json_decode($response, true);
 
-// Memeriksa apakah 'taken' bernilai true
 if ($data['taken'] === true) {
     echo "[" . date("h:i:s") . "]=>$Red Result =>$White $randomWord $Red telah diambil $White| Response : $response \n";
 } elseif ($data['taken'] === false) {
